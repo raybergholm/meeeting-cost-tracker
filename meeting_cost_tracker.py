@@ -4,7 +4,7 @@ import argparse
 import datetime
 import time
 
-DEFAULT_CURRENCY_SYMBOL = "euros"
+DEFAULT_CURRENCY = "euros"
 DEFAULT_WORKING_HOURS = "37.5"
 
 '''
@@ -74,8 +74,8 @@ def main():
 def parse_cli_arguments():
     parser = argparse.ArgumentParser(
         description="A tongue-in-cheek way of tracking the cost of your meetings")
-    parser.add_argument("-c", "--currency-symbol", dest="currency_symbol", action="store", default=DEFAULT_CURRENCY_SYMBOL,
-                        help="Currency symbol to display (default: {0})".format(DEFAULT_CURRENCY_SYMBOL))
+    parser.add_argument("-c", "--currency", dest="currency", action="store", default=DEFAULT_CURRENCY,
+                        help="What currency to display (default: {0})".format(DEFAULT_CURRENCY))
     parser.add_argument("-w", "--working-hours", dest="working_hours", action="store", default=DEFAULT_WORKING_HOURS,
                         help="How many working hours in your week? (default: {0})".format(DEFAULT_WORKING_HOURS))
 
